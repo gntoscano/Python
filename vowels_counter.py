@@ -2,11 +2,13 @@
 
 vowels = ['a', 'e', 'i', 'o', 'u'] 
 
-string = str(input("Type any string: ")).lower()
+string = str(input("Type any string: ")).strip().lower()
+words = string.split()
+together = ''.join(words)
 
-count = countA = countE = countI = countO = countU = 0
+count = countA = countE = countI = countO = countU = countCon = 0
 
-for i in string:
+for i in together:
     if i in vowels:
         count += 1
         if i == 'a':
@@ -19,9 +21,12 @@ for i in string:
             countO += 1
         if i == 'u':
             countU += 1
+    else: 
+        countCon+= 1
 
 
 print("\nThis string have:", count, "vowel(s)")
+print("\nThis string have:", countCon, "consonant(s)")
 print("A:", countA)
 print("E:", countE)
 print("I:", countI)
