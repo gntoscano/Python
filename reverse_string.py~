@@ -1,0 +1,7 @@
+phrase = str(input("Write a phrase: "))
+
+reversed_string = ''.join(reversed(phrase))
+
+print(f"The reversed phrase is: '{reversed_string}'")
+
+
